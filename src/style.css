@@ -52,12 +52,12 @@ a { color: inherit; }
 /* ---------- Cursor ---------- */
 .cursor {
   position: fixed; left: 0; top: 0; z-index: 95;
-  width: 90px; height: 90px; margin: -45px 0 0 -45px; border-radius: 50%;
+  width: 44px; height: 44px; margin: -22px 0 0 -22px; border-radius: 50%;
   background: var(--yellow); mix-blend-mode: difference; pointer-events: none;
   transform: translate(-200px, -200px);
   transition: width .35s var(--ease), height .35s var(--ease), margin .35s var(--ease);
 }
-.cursor.is-big { width: 150px; height: 150px; margin: -75px 0 0 -75px; }
+.cursor.is-big { width: 84px; height: 84px; margin: -42px 0 0 -42px; }
 @media (hover: none), (pointer: coarse) { .cursor { display: none; } }
 
 /* ---------- Header ---------- */
@@ -90,11 +90,11 @@ a { color: inherit; }
 /* ---------- Hero ---------- */
 .hero {
   position: relative; min-height: 100svh;
-  padding: 120px var(--gutter) 0;
+  padding: 120px var(--gutter) 56px;
   display: flex; flex-direction: column; justify-content: space-between;
   overflow: hidden;
 }
-.hero__egg { position: absolute; right: 1%; top: 4%; width: min(720px, 76vw); aspect-ratio: 1; pointer-events: none; }
+.hero__egg { position: absolute; right: -2%; top: 50%; translate: 0 -50%; width: min(640px, 58vw, 82svh); aspect-ratio: 1; pointer-events: none; z-index: 0; }
 .hero__egg canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
 .ring { position: absolute; }
 .ring--a { inset: 6%; animation: spin 18s linear infinite; }
@@ -103,11 +103,12 @@ a { color: inherit; }
 .egg-fallback { display: none; position: absolute; left: 32%; top: 22%; width: 36%; aspect-ratio: 64 / 80; }
 .no-webgl .egg-fallback { display: block; }
 .egg-fallback__yolk { position: absolute; left: 25%; top: 42%; width: 50%; aspect-ratio: 1; border-radius: 50%; background: var(--yellow); box-shadow: 0 0 100px 30px rgba(255, 214, 10, .55); }
-.hero__lead { position: relative; margin: 0; max-width: 420px; font-size: 18px; }
+.hero__lead { position: relative; z-index: 1; margin: 0; max-width: 420px; font-size: 18px; }
+@media (max-width: 900px) { .hero__title { max-width: none; } .hero__egg { top: 38%; width: min(520px, 90vw); right: -12%; opacity: .85; } }
 .hero__title {
-  position: relative; margin: 0 0 24px;
+  position: relative; z-index: 1; margin: 0; max-width: 62%;
   font-family: var(--display); font-weight: 900;
-  font-size: clamp(3.5rem, 15vw, 15rem); letter-spacing: -.055em; line-height: .86;
+  font-size: clamp(3rem, min(10.5vw, 19svh), 11rem); letter-spacing: -.05em; line-height: .88;
   text-transform: uppercase; transform-origin: left bottom;
 }
 .hero__title .row { display: block; overflow: hidden; padding: .04em 0; }
