@@ -96,7 +96,8 @@ a { color: inherit; }
 }
 .hero__egg { position: absolute; right: -2%; top: 50%; translate: 0 -50%; width: min(640px, 58vw, 82svh); aspect-ratio: 1; pointer-events: none; z-index: 0; }
 .hero__egg canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
-.ring { position: absolute; }
+.ring { position: absolute; transform-origin: 50% 50%; will-change: transform; }
+.ring svg { display: block; }
 .ring--a { inset: 6%; animation: spin 18s linear infinite; }
 .ring--b { inset: 15%; animation: spin 26s linear infinite reverse; }
 @keyframes spin { to { transform: rotate(360deg); } }
