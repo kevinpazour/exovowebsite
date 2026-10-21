@@ -15,6 +15,24 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').match
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 
+ScrollTrigger.config({ ignoreMobileResize: true });
+
+/* ---------- Mobiles Menü ---------- */
+const menuBtn = $('#menuBtn');
+const mobileMenu = $('#mobileMenu');
+if (menuBtn && mobileMenu) {
+  const setMenu = (open) => {
+    mobileMenu.hidden = !open;
+    menuBtn.setAttribute('aria-expanded', String(open));
+    menuBtn.textContent = open ? 'Schließen' : 'Menü';
+    document.body.classList.toggle('menu-open', open);
+  };
+  menuBtn.addEventListener('click', () => setMenu(mobileMenu.hidden));
+  $$('a', mobileMenu).forEach((a) => a.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !mobileMenu.hidden) setMenu(false); });
+}
+
+
 /* ---------- Partikel-Ei (nur Startseite, lazy geladen) ---------- */
 let egg = null;
 const eggCanvas = $('#eggCanvas');
@@ -66,21 +84,6 @@ function playIntro() {
   gsap.from('[data-hero-fade]', { opacity: 0, y: 20, duration: .8, delay: 1 });
 }
 
-/* ---------- Mobiles Menü ---------- */
-const menuBtn = $('#menuBtn');
-const mobileMenu = $('#mobileMenu');
-if (menuBtn && mobileMenu) {
-  const setMenu = (open) => {
-    mobileMenu.hidden = !open;
-    menuBtn.setAttribute('aria-expanded', String(open));
-    menuBtn.textContent = open ? 'Schließen' : 'Menü';
-    document.body.classList.toggle('menu-open', open);
-  };
-  menuBtn.addEventListener('click', () => setMenu(mobileMenu.hidden));
-  $$('a', mobileMenu).forEach((a) => a.addEventListener('click', () => setMenu(false)));
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !mobileMenu.hidden) setMenu(false); });
-}
-
 /* ---------- Cursor ---------- */
 const cursor = $('#cursor');
 if (cursor && window.matchMedia('(hover: hover) and (pointer: fine)').matches && !reduceMotion) {
@@ -130,8 +133,8 @@ if (!reduceMotion) {
     });
     const next = panels.at(i + 1);
     if (next) {
-      gsap.fromTo(panel, { scale: 1, rotate: 0, filter: 'brightness(1)' }, {
-        scale: .92, rotate: -2, filter: 'brightness(.78)', ease: 'none', immediateRender: false,
+      gsap.fromTo(panel, { scale: 1, rotate: 0 }, {
+        scale: .92, rotate: -2, ease: 'none', immediateRender: false,
         scrollTrigger: { trigger: next, start: 'top bottom', end: 'top top', scrub: true },
       });
     }

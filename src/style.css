@@ -142,6 +142,7 @@ a { color: inherit; }
   padding: 120px var(--gutter) 48px;
   display: flex; flex-direction: column; justify-content: space-between; gap: 24px;
   overflow: hidden; transform-origin: 50% 0;
+  -webkit-backface-visibility: hidden; backface-visibility: hidden;
 }
 .panel--black { background: var(--black); border-top: 2px solid var(--cream); }
 .panel--yellow { background: var(--yellow); color: var(--black); }
@@ -240,7 +241,7 @@ a { color: inherit; }
 }
 
 /* ---------- Mobiles Menü ---------- */
-.menu-btn { display: none; min-height: 44px; padding: 12px 20px; border: 2px solid var(--yellow); border-radius: 999px; background: var(--black); color: var(--yellow); font-family: var(--display); font-weight: 700; font-size: 12px; text-transform: uppercase; cursor: pointer; }
+.menu-btn { display: none; touch-action: manipulation; -webkit-tap-highlight-color: transparent; position: relative; z-index: 2; min-height: 44px; padding: 12px 20px; border: 2px solid var(--yellow); border-radius: 999px; background: var(--black); color: var(--yellow); font-family: var(--display); font-weight: 700; font-size: 12px; text-transform: uppercase; cursor: pointer; }
 .mobile-menu { position: fixed; inset: 0; z-index: 60; background: var(--yellow); color: var(--black); padding: 120px var(--gutter) 40px; display: flex; flex-direction: column; justify-content: space-between; }
 .mobile-menu[hidden] { display: none; }
 .mobile-menu nav { display: flex; flex-direction: column; gap: 8px; }
