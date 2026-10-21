@@ -137,7 +137,7 @@ export function createEgg(canvas, { reduceMotion = false } = {}) {
     uPointer: { value: new THREE.Vector2(9, 9) },
     uPointerActive: { value: 0 },
     uPixelRatio: { value: Math.min(2, window.devicePixelRatio || 1) },
-    uSize: { value: small ? 7 : 5.5 },
+    uSize: { value: small ? 3.2 : 5.5 },
     uColorShell: { value: new THREE.Color('#FFD60A') },
     uColorYolk: { value: new THREE.Color('#FF3D2E') },
   };
