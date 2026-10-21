@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ex Ovo – Webdesign &amp; Branding aus Wien</title>
+  <meta name="description" content="Ex Ovo gestaltet mutige Websites und Marken für Unternehmen in Österreich. Webdesign, Branding und Relaunch aus Wien – zum Fixpreis.">
+  <meta property="og:title" content="Ex Ovo – Mutig aus dem Ei">
+  <meta property="og:description" content="Webdesign &amp; Branding aus Wien für Unternehmen, die nicht im Hintergrund verschwinden wollen.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_AT">
+  <meta name="theme-color" content="#0A0A0A">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Ex Ovo GmbH",
+    "description": "Webdesign und Branding aus Wien",
+    "email": "max@exovoagency.at",
+    "telephone": "+43 660 5526006",
+    "address": { "@type": "PostalAddress", "streetAddress": "Webgasse 5", "postalCode": "1060", "addressLocality": "Wien", "addressCountry": "AT" },
+    "founder": { "@type": "Person", "name": "Maximilian Högler" },
+    "areaServed": "AT"
+  }
+  </script>
+</head>
+<body class="is-loading">
+  <a class="skip" href="#main">Zum Inhalt springen</a>
+
+  <!-- Ladebildschirm -->
+  <div class="loader" id="loader" role="status" aria-live="polite">
+    <div class="loader__top"><span>Ex Ovo</span><span>Wien</span></div>
+    <div class="loader__num" id="loaderNum">000</div>
+    <div class="loader__bottom">
+      <span>Wird ausgebrütet</span>
+      <button type="button" class="loader__skip" id="loaderSkip">Überspringen</button>
+    </div>
+  </div>
+
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+
+  <header class="header">
+    <a class="brand" href="#start" aria-label="Ex Ovo – zum Seitenanfang">
+      <svg aria-hidden="true" width="22" height="28" viewBox="0 0 64 80"><path d="M32 3C49 3 60 29 60 49C60 66 48 77 32 77C16 77 4 66 4 49C4 29 15 3 32 3Z" fill="none" stroke="#F5F2EA" stroke-width="6"/><circle cx="32" cy="50" r="16" fill="#FFD60A"/></svg>
+      <span>EX OVO</span>
+    </a>
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a href="#leistungen">Leistungen</a>
+      <a href="#preise">Preise</a>
+      <a href="#ueber">Über mich</a>
+      <a class="btn btn--yellow" href="#kontakt">Los geht's</a>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero" id="start">
+      <div class="hero__egg" id="eggStage" aria-hidden="true">
+        <svg class="ring ring--a" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="none" stroke="#FFD60A" stroke-width=".4" stroke-dasharray="1.5 4"/></svg>
+        <svg class="ring ring--b" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="none" stroke="#FF3D2E" stroke-width=".8" stroke-dasharray="12 10"/></svg>
+        <canvas id="eggCanvas"></canvas>
+        <div class="egg-fallback">
+          <svg viewBox="0 0 64 80"><path d="M32 3C49 3 60 29 60 49C60 66 48 77 32 77C16 77 4 66 4 49C4 29 15 3 32 3Z" fill="#141414" stroke="#F5F2EA" stroke-width="1.5"/></svg>
+          <span class="egg-fallback__yolk"></span>
+        </div>
+      </div>
+      <p class="hero__lead" data-hero-fade>Webdesign &amp; Branding aus Wien – für Unternehmen, die nicht im Hintergrund verschwinden wollen.</p>
+      <h1 class="hero__title" id="heroTitle" aria-label="Mutig aus dem Ei.">
+        <span class="row" aria-hidden="true"><span class="ltr">M</span><span class="ltr">u</span><span class="ltr">t</span><span class="ltr">i</span><span class="ltr">g</span></span>
+        <span class="row" aria-hidden="true"><span class="ltr">a</span><span class="ltr">u</span><span class="ltr">s</span>&nbsp;<span class="ltr">d</span><span class="ltr">e</span><span class="ltr">m</span></span>
+        <span class="row" aria-hidden="true"><span class="ltr y">E</span><span class="ltr y">i</span><span class="ltr r">.</span></span>
+      </h1>
+    </section>
+
+    <!-- Klebebänder -->
+    <div class="tapes" aria-hidden="true">
+      <div class="tape tape--yellow"><div class="marquee"><span>Websites</span><span>✦</span><span>Branding</span><span>✦</span><span>Relaunch</span><span>✦</span><span>Made in Wien</span><span>✦</span><span>Websites</span><span>✦</span><span>Branding</span><span>✦</span><span>Relaunch</span><span>✦</span><span>Made in Wien</span><span>✦</span></div></div>
+      <div class="tape tape--red"><div class="marquee marquee--rev"><span>Keine Vorlagen</span><span>●</span><span>Kein Baukasten</span><span>●</span><span>Kein Mittelmaß</span><span>●</span><span>Keine Vorlagen</span><span>●</span><span>Kein Baukasten</span><span>●</span><span>Kein Mittelmaß</span><span>●</span></div></div>
+    </div>
+
+    <!-- Statement -->
+    <section class="statement" id="statement" aria-label="Haltung">
+      <div class="statement__inner">
+        <p class="statement__text" id="statementText">Langweilig<br>ist das neue<br>Unsichtbar.</p>
+      </div>
+    </section>
+
+    <!-- Leistungen -->
+    <section class="services" id="leistungen" aria-label="Leistungen">
+      <article class="panel panel--black">
+        <div class="panel__meta"><span class="y">01 / 04</span><span>Leistungen</span></div>
+        <h2 class="panel__title">Web&shy;sites</h2>
+        <p class="panel__text">Individuell gestaltet, rasend schnell, auf jedem Handy stark – und so gebaut, dass Google sie findet.</p>
+      </article>
+      <article class="panel panel--yellow">
+        <div class="panel__meta"><span>02 / 04</span><span>Leistungen</span></div>
+        <h2 class="panel__title">Bran&shy;ding</h2>
+        <p class="panel__text">Logo, Farben, Schriften, Haltung. Ein Auftritt, den man nach drei Sekunden wiedererkennt.</p>
+      </article>
+      <article class="panel panel--red">
+        <div class="panel__meta"><span>03 / 04</span><span>Leistungen</span></div>
+        <h2 class="panel__title">Re&shy;launch</h2>
+        <p class="panel__text">Die alte Website macht keinen Eindruck mehr? Abreißen, neu bauen, wieder Anfragen bekommen.</p>
+      </article>
+      <article class="panel panel--cream">
+        <div class="panel__meta"><span>04 / 04</span><span>Leistungen</span></div>
+        <h2 class="panel__title">Texte</h2>
+        <p class="panel__text">Worte, die verkaufen. Auf Wunsch schreibe und strukturiere ich alle Inhalte gleich mit.</p>
+      </article>
+    </section>
+
+    <!-- Riesenwörter -->
+    <div class="giants" aria-hidden="true">
+      <div class="giant" data-drift="-1">Laut · Klar · Laut · Klar ·</div>
+      <div class="giant giant--outline" data-drift="1">Schnell · Wien · Schnell · Wien ·</div>
+    </div>
+
+    <!-- Preise -->
+    <section class="prices" id="preise">
+      <div class="section-head">
+        <h2 class="h-xl" data-skew>Klare<br><span class="y">Preise.</span></h2>
+        <p data-skew>Fixpreis statt Überraschungen. Nach dem Erstgespräch gibt's ein verbindliches Angebot.</p>
+      </div>
+      <div class="cards">
+        <div class="card card--cream" data-flip>
+          <span class="card__name">Start</span>
+          <span class="card__price">ab 990 €</span>
+          <p>Onepager, mobil optimiert, Kontaktformular, Basis-SEO.</p>
+          <a href="#kontakt">Anfragen →</a>
+        </div>
+        <div class="card card--red" data-flip>
+          <span class="card__name">Business</span>
+          <span class="card__price">ab 2.200 €</span>
+          <p>5–8 Unterseiten, individuelles Design, SEO, Einschulung.</p>
+          <a href="#kontakt">Anfragen →</a>
+        </div>
+        <div class="card card--cream" data-flip>
+          <span class="card__name">Marke</span>
+          <span class="card__price">ab 900 €</span>
+          <p>Logo, Farben, Schriften, Styleguide, druckfertige Dateien.</p>
+          <a href="#kontakt">Anfragen →</a>
+        </div>
+        <div class="card card--yellow" data-flip>
+          <span class="card__sticker">Bestes Paket</span>
+          <span class="card__name">Komplett</span>
+          <span class="card__price">ab 2.900 €</span>
+          <p>Marke + Business-Website aus einem Guss. Ein Ansprechpartner für alles.</p>
+          <a href="#kontakt">Anfragen →</a>
+        </div>
+      </div>
+      <p class="fineprint" data-skew>Alle Preise netto zzgl. 20 % USt. · Betreuung ab 39 € / Monat · Zusatzwünsche 80 € / Stunde</p>
+    </section>
+
+    <!-- Über mich -->
+    <section class="about" id="ueber">
+      <div class="about__photo">
+        <div class="about__ring" aria-hidden="true"></div>
+        <div class="about__frame" id="aboutFrame">
+          <picture>
+            <source srcset="/img/max.webp" type="image/webp">
+            <img src="/img/max.jpg" alt="Maximilian Högler, Gründer von Ex Ovo" width="900" height="1200" loading="lazy">
+          </picture>
+        </div>
+        <span class="about__sticker" aria-hidden="true">Gründer</span>
+      </div>
+      <div class="about__text">
+        <h2 class="h-xl" data-skew>Servus,<br>ich bin <span class="y">Max.</span></h2>
+        <p data-skew>Maximilian Högler, Jahrgang 1995. Ich gestalte Websites und Marken – und weiß aus der Führung meines eigenen Unternehmens, worauf es ankommt: ein Auftritt, der auffällt, Vertrauen schafft und Anfragen bringt.</p>
+        <div class="tags" data-skew>
+          <span class="tag tag--line">Design</span>
+          <span class="tag tag--yellow">Websites</span>
+          <span class="tag tag--red">Branding</span>
+          <span class="tag tag--line">Unternehmer</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section class="contact" id="kontakt">
+      <div class="contact__band" aria-hidden="true"><div class="marquee marquee--slow"><span>Los geht's</span><span>→</span><span>Los geht's</span><span>→</span><span>Los geht's</span><span>→</span><span>Los geht's</span><span>→</span></div></div>
+      <div class="contact__body">
+        <div class="burst" id="contactBurst" aria-hidden="true"></div>
+        <div class="contact__col">
+          <p class="contact__kicker">Bereit zum Schlüpfen? Schreib oder ruf an.</p>
+          <a class="big-link" href="mailto:max@exovoagency.at">max@exovoagency.at</a>
+          <a class="big-link" href="tel:+436605526006">+43 660 5526006</a>
+        </div>
+        <form class="form" id="contactForm" action="https://formspree.io/f/[FORMSPREE-ID]" method="POST">
+          <label>Name<input type="text" name="name" autocomplete="name" required></label>
+          <label>E-Mail<input type="email" name="email" autocomplete="email" required></label>
+          <label>Worum geht es?
+            <select name="leistung">
+              <option>Neue Website</option>
+              <option>Branding</option>
+              <option>Website &amp; Branding</option>
+              <option>Relaunch</option>
+            </select>
+          </label>
+          <label>Nachricht<textarea name="nachricht" rows="4" required></textarea></label>
+          <label class="form__check"><input type="checkbox" name="datenschutz" required> Ich habe die <a href="/datenschutz.html">Datenschutzerklärung</a> gelesen.</label>
+          <button class="btn btn--black" type="submit">Anfrage senden →</button>
+          <p class="form__status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© 2026 Ex Ovo GmbH · Webgasse 5, 1060 Wien</span>
+    <nav aria-label="Rechtliches">
+      <a href="/impressum.html">Impressum</a>
+      <a href="/datenschutz.html">Datenschutz</a>
+      <a class="y" href="#start">Nach oben ↑</a>
+    </nav>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
