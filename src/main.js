@@ -116,7 +116,7 @@ if (!reduceMotion) {
     const next = panels.at(i + 1);
     if (next) {
       gsap.to(panel, {
-        scale: .9, rotate: -2, filter: 'brightness(.6)', ease: 'none',
+        scale: .92, rotate: -2, filter: 'brightness(.78)', ease: 'none',
         scrollTrigger: { trigger: next, start: 'top bottom', end: 'top top', scrub: true },
       });
     }

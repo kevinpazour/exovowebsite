@@ -158,13 +158,14 @@ a { color: inherit; }
 /* ---------- Prices ---------- */
 .prices { padding: 80px var(--gutter) 160px; }
 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; perspective: 1200px; }
-.card { position: relative; padding: 32px; border-radius: 28px; display: flex; flex-direction: column; gap: 20px; min-height: 340px; color: var(--black); transition: transform .5s var(--spring); }
+.card-wrap { display: flex; }
+.card { position: relative; flex: 1; padding: 32px; border-radius: 28px; display: flex; flex-direction: column; gap: 20px; min-height: 340px; color: var(--black); transition: transform .5s var(--spring); }
 .card:hover { transform: rotate(-3deg) scale(1.04); }
 .card--cream { background: var(--cream); }
 .card--red { background: var(--red); }
 .card--yellow { background: var(--yellow); }
 .card__name { font-family: var(--display); font-weight: 700; text-transform: uppercase; font-size: 14px; }
-.card__price { font-family: var(--display); font-weight: 900; font-size: 44px; line-height: 1; letter-spacing: -.04em; }
+.card__price { font-family: var(--display); font-weight: 900; font-size: clamp(30px, 2.6vw, 42px); white-space: nowrap; line-height: 1; letter-spacing: -.04em; }
 .card p { margin: 0; flex-grow: 1; }
 .card a { font-weight: 700; padding: 10px 0; }
 .card__sticker { position: absolute; top: -16px; right: 20px; padding: 8px 14px; border-radius: 999px; background: var(--black); color: var(--yellow); font-family: var(--display); font-weight: 700; font-size: 12px; text-transform: uppercase; transform: rotate(6deg); }
@@ -193,7 +194,7 @@ a { color: inherit; }
 .contact__body { position: relative; padding: 96px var(--gutter) 120px; display: flex; flex-wrap: wrap; gap: 64px; }
 .contact__col { flex: 1 1 420px; display: flex; flex-direction: column; gap: 24px; min-width: 0; }
 .contact__kicker { margin: 0; font-family: var(--display); font-weight: 700; text-transform: uppercase; }
-.big-link { text-decoration: none; font-family: var(--display); font-weight: 900; font-size: clamp(1.6rem, 4.6vw, 4.5rem); line-height: 1; letter-spacing: -.04em; overflow-wrap: anywhere; transition: color .3s, letter-spacing .5s var(--ease); }
+.big-link { text-decoration: none; font-family: var(--display); font-weight: 900; font-size: clamp(1.4rem, 3vw, 3.25rem); line-height: 1.05; letter-spacing: -.04em; white-space: nowrap; transition: color .3s, letter-spacing .5s var(--ease); }
 .big-link:hover { color: var(--red); letter-spacing: .01em; }
 .form { flex: 1 1 380px; display: flex; flex-direction: column; gap: 18px; }
 .form label { display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600; }
@@ -222,6 +223,7 @@ a { color: inherit; }
 .legal dt { color: var(--muted); }
 .legal dd { margin: 0; }
 .legal .note { padding: 16px 20px; border-left: 4px solid var(--red); background: var(--ink); }
+@media (max-width: 420px) { .big-link { white-space: normal; overflow-wrap: anywhere; } }
 @media (max-width: 560px) { .legal dl { grid-template-columns: 1fr; } .legal dd { margin-bottom: 12px; } }
 
 /* ---------- Reduced motion ---------- */
