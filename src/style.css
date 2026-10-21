@@ -240,7 +240,7 @@ a { color: inherit; }
 }
 
 /* ---------- Mobiles Menü ---------- */
-.menu-btn { display: none; min-height: 44px; padding: 12px 20px; border: 0; border-radius: 999px; background: var(--yellow); color: var(--black); font-family: var(--display); font-weight: 700; font-size: 12px; text-transform: uppercase; cursor: pointer; }
+.menu-btn { display: none; min-height: 44px; padding: 12px 20px; border: 2px solid var(--yellow); border-radius: 999px; background: var(--black); color: var(--yellow); font-family: var(--display); font-weight: 700; font-size: 12px; text-transform: uppercase; cursor: pointer; }
 .mobile-menu { position: fixed; inset: 0; z-index: 60; background: var(--yellow); color: var(--black); padding: 120px var(--gutter) 40px; display: flex; flex-direction: column; justify-content: space-between; }
 .mobile-menu[hidden] { display: none; }
 .mobile-menu nav { display: flex; flex-direction: column; gap: 8px; }
@@ -248,7 +248,7 @@ a { color: inherit; }
 .mobile-menu__contact { display: flex; flex-direction: column; gap: 6px; font-weight: 600; font-size: 18px; }
 .mobile-menu__contact a { text-decoration: none; }
 body.menu-open { overflow: hidden; }
-body.menu-open .menu-btn { background: var(--black); color: var(--yellow); }
+body.menu-open .menu-btn { border-color: var(--black); }
 @media (max-width: 760px) {
   .nav { display: none; }
   .menu-btn { display: inline-block; }
